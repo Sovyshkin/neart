@@ -240,7 +240,7 @@ export default defineNuxtConfig({
     '/hidden': { robots: false },
     '/': { swr: true },
     '/market': { swr: true },
-    '/about-us': { prerender: true }
+    '/about-us': { ssr: true }
   },
 
   // Used by all modules in the @nuxtjs/seo collection

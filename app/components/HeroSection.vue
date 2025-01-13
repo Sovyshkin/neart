@@ -23,7 +23,7 @@
             </h3> -->
             <UButton
               label="Начать покупки"
-              to="/arts"
+              to="/market"
               size="xl"
               trailing
               class="mt-4 fon"

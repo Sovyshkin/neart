@@ -39,11 +39,15 @@
   const bgStyles = imageOptimized.bgStyles
 </script>
 <template>
-  <div class="bg-center bg-cover bg-no-repeat blur-none z-0" :style="bgStyles">
+  <div class="bg-cover bg-no-repeat blur-none z-0 bg" :style="bgStyles">
     <!-- <div
       class="bg-center bg-cover bg-no-repeat blur-none z-0 bg-design-image lg:bg-design-image-large"
     > -->
     <slot />
   </div>
 </template>
-<style scoped></style>
+<style scoped>
+  .bg {
+    height: 70vh;
+  }
+</style>

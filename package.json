@@ -22,11 +22,16 @@
     "format": "prettier --write \"**/*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts,html,css,md,mdx,json}\" !public --ignore-path .gitignore"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
     "@pinia/nuxt": "^0.5.4",
     "@vee-validate/nuxt": "^4.13.2",
     "@vueuse/core": "^11.0.3",
+    "axios": "^1.7.7",
+    "epic-spinners": "^2.0.0",
     "lite-youtube-embed": "^0.3.3",
-    "pinia": "^2.2.2"
+    "nuxt-storage": "^1.2.2",
+    "pinia": "^2.2.2",
+    "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "@iconify/json": "^2.2.242",

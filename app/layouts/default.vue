@@ -17,4 +17,8 @@
     <!-- </div> -->
   </div>
 </template>
-<style></style>
+<style>
+  main {
+    min-height: 100vh;
+  }
+</style>

@@ -6,7 +6,7 @@
     // name: 'index',
     // alias: 'index',
     title: 'Home',
-    description: 'New Arrivals, Big Savings!',
+    description: 'Новые поступления, Большая экономия!',
     navOrder: 1,
     type: 'primary',
     icon: 'i-mdi-home',
@@ -34,7 +34,7 @@
   <div>
     <HeroSection />
     <UContainer class="pt-8">
-      <LaunchSale class="mt-8" />
+      <!-- <LaunchSale class="mt-8" /> -->
       <HotDeals class="mt-8" />
     </UContainer>
   </div>

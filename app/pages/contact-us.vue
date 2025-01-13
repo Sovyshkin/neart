@@ -18,40 +18,37 @@
     <div class="container mx-auto px-4">
       <div class="-mx-4 flex flex-wrap">
         <div class="mx-auto px-4 rounded-2xl w-full lg:w-8/12">
-          <div class="px-6 py-12 rounded-lg tertiary-card">
+          <div
+            class="px-6 py-12 rounded-lg tertiary-card flex flex-col gap-3 items-center"
+          >
             <h2 class="font-bold leading-tight mb-2 text-3xl">
-              Subscribe To Our Newsletter
+              Свяжись с нами
             </h2>
-            <p class="mb-8">
-              Sign up for our newsletter to receive updates and exclusive offers
-            </p>
-            <form
-              class="mx-auto sm:w-9/12 xl:w-8/12"
-              action="https://www.getdrip.com/forms/243852739/submissions"
-              method="post"
+            <p class="mb-5">Перейди в телеграм и задай свой вопрос!</p>
+            <a
+              href="https://t.me/vselena_deva"
+              class="btn tg"
               target="_blank"
-              rel="noopener"
-              data-drip-embedded-form="243852739"
+              rel="noopener noreferrer"
             >
-              <div class="flex items-center overflow-hidden p-2 rounded-full">
-                <label for="emailfield" class="sr-only">Email address:</label>
-                <input
-                  id="emailfield"
-                  class="border-0 flex-1 outline-none px-5 py-2 rounded-full w-full"
-                  placeholder="email@example.com"
-                  type="email"
-                  required
-                  name="fields[email]"
-                />
-                <UButton type="submit" class="ml-2" size="md" color="secondary">
-                  Sign Up
-                </UButton>
-              </div>
-            </form>
+              <img src="../assets/telegram.png" alt="" />
+              <span>Перейти</span>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
-<style scoped></style>
+<style scoped>
+  .tg {
+    width: fit-content;
+    padding: 7px 12px;
+    background-color: #fff;
+    color: black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+</style>

@@ -10,8 +10,8 @@ export type Product = {
   title: string
   price: string
   description: string
-  category: string
-  image: string
+  category: string,
+  img_urls: string[]
   imageOptimized?: ImageOptimized
   rating: Rating
   badge: string

@@ -3,6 +3,8 @@ import { resolve } from 'pathe'
 import { addComponent } from 'nuxt/kit'
 import presetIcons from '@unocss/preset-icons'
 import { bundledLanguages } from 'shiki'
+import axios from 'axios'
+axios.defaults.baseURL = 'http://45.12.238.27:5000'
 
 import site from './site'
 const {
@@ -20,6 +22,7 @@ export default defineNuxtConfig({
   extends: [
     './app-nuxtui-layer', // NavBar and Footer components
   ],
+
   // ssr: false,
   // devtools: { enabled: false }, // enabled by default, disable when using standalone Vue devtools
 
@@ -235,6 +238,9 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/hidden': { robots: false },
+    '/': { swr: true },
+    '/market': { swr: true },
+    '/about-us': { prerender: true }
   },
 
   // Used by all modules in the @nuxtjs/seo collection
@@ -250,10 +256,12 @@ export default defineNuxtConfig({
     trailingSlash,
     titleSeparator,
   },
+
   robots: {
     // https://nuxtseo.com/robots/api/config#blocknonseobots
     blockNonSeoBots: true,
   },
+
   sitemap: {
     // https://nuxtseo.com/sitemap/guides/i18n#debugging-hreflang
     // Open {{site.url}}/sitemap.xml
@@ -273,6 +281,7 @@ export default defineNuxtConfig({
     // Remove strictNuxtContentPaths if using nuxt-content in documentDriven mode
     strictNuxtContentPaths: true,
   },
+
   ogImage: {
     // OG images and nuxtseo features can be previewed with nuxt-devtools during development. OG images can also be viewed using URL in this form - `/__og-image__/image/<path>/og.<extension>. For eg, {{site.url}}/__og-image__/image/og.png
     // fonts: ['Inter:400', 'Inter:700'],
@@ -282,6 +291,7 @@ export default defineNuxtConfig({
     // disable at a global level
     // runtimeCacheStorage: false,
   },
+
   linkChecker: {
     enabled: false,
     excludeLinks: ['https://twitter.com/vuedesigner'],
@@ -314,6 +324,12 @@ export default defineNuxtConfig({
     // ...
   },
 
+  // runtimeConfig: {
+  //   public: {
+  //     // baseUrl: 'http://45.12.238.27:5000/'
+  //     baseUrl: 'http://45.12.238.27:5000'
+  //   }
+  // }
   pinegrow: {
     liveDesigner: {
       iconPreferredCase: 'unocss', // default value (can be removed), Nuxt UI uses the unocss format for icon names
@@ -337,4 +353,6 @@ export default defineNuxtConfig({
       // ],
     },
   },
+
+  compatibilityDate: '2024-12-04',
 })

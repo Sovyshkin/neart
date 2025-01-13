@@ -3,77 +3,70 @@
 // @unocss-include
 
 export default {
-  name: 'NuCommerce',
-  description:
-    'Vue Designer Nuxt Tailwind CSS / Nuxt UI - Quick start template',
+  name: 'НеХудожник',
+  description: '',
   logo: 'i-fluent-emoji:shopping-bags',
-  author: 'Pinegrow',
-  url: 'https://pg-nuxtui.netlify.app',
-  github: 'https://github.com/pinegrow/pg-nuxtui',
-  defaultLocale: 'en', // default
+  author: 'Zankov',
+  defaultLocale: 'ru', // default
   identity: {
     type: 'Organization',
   } as any,
-  twitter: '@vuedesigner',
   trailingSlash: false, // default
   titleSeparator: '|', // default
   nav: [
-    { text: 'Home', link: '/', type: 'primary', icon: 'i-mdi-home' },
-    { text: 'Women', link: '/women', type: 'primary', icon: 'i-mdi-home' },
-    { text: 'Men', link: '/men', type: 'primary', icon: 'i-mdi-home' },
+    { text: 'Главная', link: '/', type: 'primary', icon: 'i-mdi-home' },
     {
-      text: 'Jewellery',
-      link: '/jewellery',
+      text: 'Картины',
+      link: '/market',
+      type: 'primary'
+    },
+    {
+      text: 'О нас',
+      link: '/about-us',
       type: 'primary',
       icon: 'i-mdi-home',
     },
     {
-      text: 'Electronics',
-      link: '/electronics',
-      type: 'primary',
-      icon: 'i-mdi-home',
+      text: 'Корзина',
+      link: '/app-cart',
+      type: 'secondary',
+      icon: 'i-material-symbols-shopping-bag-outline',
     },
     {
-      text: 'About Us',
-      link: '/quick-start',
-      type: 'primary',
-      icon: 'i-mdi-home',
+      text: 'Избранное',
+      link: '/app-favorite',
+      type: 'secondary',
+      icon: 'i-material-symbols-favorite-outline',
     },
     {
-      text: 'Track Order',
+      text: 'Следи за заказом',
       link: '/track-order',
       type: 'secondary',
       icon: 'i-ic-outline-my-location',
     },
     {
-      text: 'Order History',
+      text: 'История заказов',
       link: '/order-history',
       type: 'secondary',
       icon: 'i-ic-baseline-history',
     },
     {
-      text: 'Returns',
-      link: '/returns',
-      type: 'secondary',
-      icon: 'i-material-symbols-assignment-return-outline-rounded',
-    },
-    {
-      text: 'Delivery Policy',
+      text: 'Политика Доставки',
       link: '/delivery-policy',
       type: 'secondary',
       icon: 'i-tabler-truck-return',
     },
     {
-      text: 'Contact Us',
+      text: 'Свяжись с нами',
       link: '/contact-us',
       type: 'secondary',
       icon: 'i-material-symbols-add-call',
     },
-    {
-      text: 'Help & FAQs',
-      link: '/help-faqs',
-      type: 'secondary',
-      icon: 'i-material-symbols-contact-support-outline',
-    },
+    // {
+    //   text: 'Помощь',
+    //   link: '/help-faqs',
+    //   type: 'secondary',
+    //   icon: 'i-material-symbols-contact-support-outline',
+    // },
   ],
 }

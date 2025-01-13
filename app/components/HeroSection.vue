@@ -16,17 +16,17 @@
           class="-mx-4 flex flex-wrap items-center justify-center mt-24 space-y-6 lg:space-y-0"
         >
           <div class="px-4 text-center w-full md:w-8/12 xl:w-6/12">
-            <h3
-              class="dark:text-secondary-200 font-bold font-serif lg:capitalize mb-1 text-primary-600 uppercase"
+            <!-- <h3
+              class="dark:text-secondary-500 font-bold font-serif lg:capitalize mb-1 text-primary-600 uppercase fon"
             >
-              New Arrivals, Big Savings!
-            </h3>
+              Новые поступления, Большая экономия!
+            </h3> -->
             <UButton
-              label="Shop Now"
-              to="/women"
+              label="Начать покупки"
+              to="/arts"
               size="xl"
               trailing
-              class="mt-4"
+              class="mt-4 fon"
             />
           </div>
         </div>
@@ -34,4 +34,8 @@
     </BackgroundImageWrapper>
   </section>
 </template>
-<style scoped></style>
+<style scoped>
+  .fon {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  }
+</style>

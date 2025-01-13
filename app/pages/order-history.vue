@@ -1,4 +1,7 @@
 <script setup lang="ts">
+  import { provide } from 'vue'
+  import axios from 'axios'
+  import { getData } from 'nuxt-storage/local-storage'
   definePageMeta({
     // layout: 'default',
     // name: 'order-history',
@@ -10,20 +13,75 @@
     icon: 'i-mdi-home',
     // ogImage: 'images/ogImage.png', // url or local images inside public folder, for eg, ~/public/images/ogImage.png
   })
-</script>
 
+  provide('load_info', load_info)
+
+  const route = useRoute()
+  const capitalize = (s) => (s && s[0].toUpperCase() + s.slice(1)) || ''
+
+  useHead({
+    title: () => capitalize(route.params.category),
+  })
+
+  useServerSeoMeta({
+    description: () => capitalize(route.params.category),
+  })
+
+  // const { category } = route.params
+  let cart_id = ref(getData('cart_id'))
+  let id = ref(getData('id'))
+  let products = ref()
+  let isLoading = ref(false)
+  async function load_info() {
+    try {
+      isLoading.value = true
+      let response = await axios.get(
+        `http://45.12.238.27:5000/orders/${id.value}`,
+      )
+      console.log(response)
+      products.value = response.data.orders
+    } catch (err) {
+      console.log(err)
+    } finally {
+      isLoading.value = false
+    }
+  }
+  if (cart_id.value) {
+    load_info()
+  } else {
+  }
+</script>
 <template>
-  <div
-    style="
-      min-height: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-    "
-  >
-    <span style="color: #0198cd">order-history.vue (Nuxt 3.6)</span>
+  <app-loader v-if="isLoading"></app-loader>
+  <div class="pb-16" v-else>
+    <h1 class="text-center text-2xl">История заказов</h1>
+    <UContainer class="py-8">
+      <!-- <section
+        class="flex items-center justify-center m-4"
+      >
+        <span class="font-bold text-sm">Filter Badges</span>
+        <div class="ml-4 space-y-2">
+          <UButton
+            v-for="(badge, index) in badges"
+            :key="index"
+            :label="badge"
+            :variant="filteredBadges.has(badge) ? 'soft' : 'outline'"
+            class="mr-2"
+            @click="toggleFilter(badge)"
+          />
+        </div>
+      </section> -->
+      <section data-pg-name="Products" class="flex flex-wrap justify-center">
+        <ProductCard
+          v-for="product in products"
+          :key="product.id"
+          :product="product"
+          v-bind="product"
+          :favorite="true"
+          @checkDel="load_info"
+        />
+      </section>
+    </UContainer>
   </div>
 </template>
-
 <style scoped></style>

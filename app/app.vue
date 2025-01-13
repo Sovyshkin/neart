@@ -54,7 +54,8 @@
   const theOgImage = theOgImageOptimized.src
 </script>
 <template>
-  <div>
+  <div class="app">
+    <!-- <img class="fon" src="./assets/back.jpg" alt="" /> -->
     <HeadAndMeta />
     <!-- We pass image separately so that alias can be transformed by vue plugin, see vite.vue.template.transformAssetUrls in nuxt.config.ts -->
     <OgImage :image="theOgImage" v-bind="ogImageOptions" />
@@ -65,4 +66,26 @@
   </div>
 </template>
 
-<style></style>
+<style>
+  .dark .card {
+    border: 1px solid white;
+  }
+  .msg {
+    padding: 15px 40px;
+    font-size: 16px;
+    line-height: 16px;
+    color: #fff;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .success {
+    background-color: #36b20c;
+  }
+
+  .error {
+    background-color: #cf0032;
+  }
+</style>

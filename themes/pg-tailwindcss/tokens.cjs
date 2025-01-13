@@ -106,13 +106,13 @@ const pg_colors = {
     200: '#e5b09c',
     300: '#da9276',
     400: '#cc7552',
-    500: '#bc572e',
-    600: '#aa3805',
+    500: '#aa6a2a',
+    600: '#aa6a2a',
     700: '#9c3305',
     800: '#8d2f06',
     900: '#7f2a05',
     950: '#722605',
-    DEFAULT: '#652103',
+    DEFAULT: '#aa6a2a',
   },
   secondary: {
     50: '#f0ebeb',
@@ -217,10 +217,12 @@ const pg_colors = {
 const pg_fonts = {
   sans: ["'Inter', sans-serif"],
   serif: ["'Kalam', sans-serif"],
+  unbounded: ["'Unbounded', sans-serif"],
 }
 
 const pg_font_urls = [
   'https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900|Kalam:300,400,700&display=swap',
+  'https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap',
 ]
 
 const pg_backgrounds = {

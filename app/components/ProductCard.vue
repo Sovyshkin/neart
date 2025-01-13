@@ -123,7 +123,7 @@
   }
   .btn {
     width: 100%;
-    background-color: rgb(var(--color-primary-600));
+    background-color: #aa6a2a;
     border-radius: 10px;
     padding: 12px 17px;
     color: #fff;

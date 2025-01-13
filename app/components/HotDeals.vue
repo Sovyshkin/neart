@@ -17,7 +17,7 @@
       <div
         class="-tracking-wide flex font-bold items-center justify-center text-5xl"
       >
-        <span class="text-center text-primary">Горячие предложения</span>
+        <span class="text-center hot">Горячие предложения</span>
         <UIcon name="i-twemoji-fire" class="ml-2" width="28px" />
       </div>
       <section
@@ -36,5 +36,9 @@
 <style scoped>
   .fon {
     background-image: url('../assets/back.jpg');
+  }
+
+  .hot {
+    color: #aa6a2a;
   }
 </style>

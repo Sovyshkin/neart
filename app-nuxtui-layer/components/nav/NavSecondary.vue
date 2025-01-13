@@ -49,4 +49,8 @@
     <UAvatar src="" alt="Avatar" size="lg" class="sm:ml-2" />
   </UDropdown>
 </template>
-<style scoped></style>
+<style scoped>
+  a {
+    color: #aa6a2a !important;
+  }
+</style>

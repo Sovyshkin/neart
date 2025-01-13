@@ -8,7 +8,7 @@
 </script>
 <template>
   <div
-    class="relative bg-primary-600 dark:bg-primary-200 text-white dark:text-primary-800"
+    class="relative bg-primary-600 dark:bg-primary-200 text-white dark:text-primary-800 back"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -27,4 +27,8 @@
     </div>
   </div>
 </template>
-<style scoped></style>
+<style scoped>
+  .back {
+    background-color: #aa6a2a;
+  }
+</style>

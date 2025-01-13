@@ -72,12 +72,12 @@
       </div>
       <div class="flex gap-2" v-if="!id">
         <UButton
-          class="font-bold my-4 sm:my-2 text-center"
+          class="font-bold my-4 sm:my-2 text-center btn"
           @click="isLog = true"
           >Войти</UButton
         >
         <UButton
-          class="font-bold my-4 sm:my-2 text-center"
+          class="font-bold my-4 sm:my-2 text-center btn"
           @click="isReg = true"
           >Присоединиться</UButton
         >
@@ -140,6 +140,9 @@
   </UModal>
 </template>
 <style scoped>
+  .btn {
+    background-color: #aa6a2a;
+  }
   .navbar-grid {
     display: grid;
     grid-template-columns: auto auto auto;

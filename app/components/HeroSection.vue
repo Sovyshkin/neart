@@ -37,5 +37,6 @@
 <style scoped>
   .fon {
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-color: #aa6a2a;
   }
 </style>

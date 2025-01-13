@@ -99,6 +99,7 @@
     font-weight: 700;
     line-height: 28.8px;
     text-align: center;
+    color: #aa6a2a;
   }
 
   .desc {
@@ -117,6 +118,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 16px;
+    background-color: #aa6a2a;
   }
 
   .log {
